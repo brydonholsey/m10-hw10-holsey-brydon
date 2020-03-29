@@ -10,11 +10,22 @@ var tempList = function(temperatures) {
     document.getElementById('water-temp').innerHTML = temperatures[2];
 };
 
-tempList(["212", "32", "13"]);
+tempList(["212", "32", "300"]);
+
+
+var waterTemp = temperatures[2];
 
 setTimeout(function() {
-    if (temperatures[2] >= 212) {
-        // document.getElementById('boiling').classList.remove(hide);
-        console.log('test');
+    if (waterTemp >= 212) {
+        document.getElementById('boiling').classList.remove(hide);
+        document.getElementById('boiling').classList.add(show);
+        }  
+        if else (waterTemp <= 32) {
+            document.getElementById('frozen').classList.remove(hide);
+            document.getElementById('frozen').classList.add(show);
+        } 
+        else {
+            document.getElementById('water-temp').classList.remove(hide);
+            document.getElementById('water-temp').classList.add(show);
         }
-    }, 3000);
+    }, 3000); 
