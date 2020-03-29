@@ -20,7 +20,7 @@ setTimeout(function() {
         document.getElementById('boiling').classList.remove(hide);
         document.getElementById('boiling').classList.add(show);
         }  
-        if else (waterTemp <= 32) {
+        else if (waterTemp <= 32) {
             document.getElementById('frozen').classList.remove(hide);
             document.getElementById('frozen').classList.add(show);
         } 
